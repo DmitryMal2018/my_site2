@@ -1,0 +1,7 @@
+<!-- templates/home.html -->
+<h1>Удаленные пользователи</h1>
+<ul>
+    {% for team in object_list %}
+        <li>{{ team.username }}</li>
+    {% endfor %}
+</ul>
