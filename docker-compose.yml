@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  web:
+    container_name: django  
+    build: .
+    ports:
+      - 8000:8000    
+    command: python manage.py runserver 0.0.0.0:8000  
+    stop_signal: SIGINT     
+    volumes:
+      - .:/my_site
+    env_file:
+      - ./.env
+#    depends_on:
+#      - postgres
+
+#  postgres:
+#    container_name: postgres
+#    image: postgres:13
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data/
+#    env_file:
+#      - ./.env
+#    
+#volumes:
+#  postgres_data:
