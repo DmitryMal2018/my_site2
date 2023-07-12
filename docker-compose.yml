@@ -11,16 +11,16 @@ services:
       - .:/my_site
     env_file:
       - ./.env
-#    depends_on:
-#      - postgres
+    depends_on:
+      - postgres
 
-#  postgres:
-#    container_name: postgres
-#    image: postgres:13
-#    volumes:
-#      - postgres_data:/var/lib/postgresql/data/
-#    env_file:
-#      - ./.env
-#    
-#volumes:
-#  postgres_data:
+  postgres:
+    container_name: postgres
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+    
+volumes:
+  postgres_data:
