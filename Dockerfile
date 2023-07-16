@@ -7,14 +7,15 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Установка рабочей директории
-WORKDIR /my_site
+WORKDIR /my_site2
 
 # Установка зависимостей
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
-# Исходный код проекта Django копируется из локального каталога в каталог образа.
+# Исходный код проекта Django копируется из локального каталога в каталог
+# образа.
 COPY . .
-EXPOSE 8000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"] 
+#EXPOSE 8000
+CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"] 
