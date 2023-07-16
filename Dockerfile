@@ -17,5 +17,5 @@ RUN pip install -r requirements.txt
 # Исходный код проекта Django копируется из локального каталога в каталог
 # образа.
 COPY . .
-#EXPOSE 8000
+
 CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"] 
