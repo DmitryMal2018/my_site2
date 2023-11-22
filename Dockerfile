@@ -1,5 +1,5 @@
 # Определяем базовый образ
-FROM python:3.10.2-slim-bullseye
+FROM python:3.11-slim-bullseye
 
 # Установка переменных окружения
 ENV PIP_DISABLE_PIP_VERSION_CHECK 1
